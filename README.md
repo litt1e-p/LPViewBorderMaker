@@ -2,6 +2,10 @@
 
 UIView extension of making UIView borders
 
+# Install
+
+`pod 'LPViewBorderMaker', '~> 0.0.1'`
+
 # Usage
 
 ```swift
@@ -18,3 +22,7 @@ UIView extension of making UIView borders
 # Screenshot
 
 <img src="screenshot.png", width=320>
+
+# Release Notes
+- 0.0.1
+  first commit version

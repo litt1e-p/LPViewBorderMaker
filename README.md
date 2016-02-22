@@ -4,7 +4,7 @@ UIView extension of making UIView borders
 
 # Install
 
-`pod 'LPViewBorderMaker', '~> 0.0.1'`
+`pod 'LPViewBorderMaker', '~> 0.0.2'`
 
 # Usage
 

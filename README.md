@@ -24,5 +24,8 @@ UIView extension of making UIView borders
 <img src="screenshot.png", width=320>
 
 # Release Notes
+
+- 0.0.2
+  view layer bugfix
 - 0.0.1
   first commit version

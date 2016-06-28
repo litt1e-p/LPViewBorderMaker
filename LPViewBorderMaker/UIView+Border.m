@@ -1,49 +1,55 @@
 //
 //  UIView+Border.m
-//  LPViewBorderMaker
+//  LPViewBorderMakerSample
 //
-//  Created by litt1e-p on 16/2/14.
+//  Created by litt1e-p on 16/6/28.
 //  Copyright © 2016年 litt1e-p. All rights reserved.
 //
 
 #import "UIView+Border.h"
-#import <QuartzCore/QuartzCore.h>
 
-#define kPositionAll @[@(LPBorderPositionTop), @(LPBorderPositionLeft), @(LPBorderPositionBottom), @(LPBorderPositionRight)]
-#define kDefaultBorderColor [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:0.5]
+#define kLPPositionAll @[@(LPBorderPositionTop), @(LPBorderPositionLeft), @(LPBorderPositionBottom), @(LPBorderPositionRight)]
+#define kLPDefaultBorderColor [UIColor colorWithRed:(0.0) green:(0.0) blue:(0.0) alpha:0.5]
 
 @implementation UIView (Border)
 
-
 - (void)makeBorders
 {
-    [self createBordersWithWidth:1 color:kDefaultBorderColor positions:[kPositionAll copy]];
+    [self makeBordersWithWidth:1.0 color:kLPDefaultBorderColor position:LPBorderPositionAll];
 }
 
 - (void)makeBordersWithWidth:(float)width color:(UIColor *)color position:(LPBorderPosition)position
 {
-    NSArray *positions = [NSArray array];
-    if (position == LPBorderPositionAll) {
-        positions = [kPositionAll copy];
-    } else {
-        positions = @[@(position)];
+    NSMutableArray *positions = [NSMutableArray array];
+    if (position & LPBorderPositionTop) {
+        [positions addObject:@(LPBorderPositionTop)];
     }
-    [self createBordersWithWidth:width color:color positions:positions];}
+    if (position & LPBorderPositionRight) {
+        [positions addObject:@(LPBorderPositionRight)];
+    }
+    if (position & LPBorderPositionBottom) {
+        [positions addObject:@(LPBorderPositionBottom)];
+    }
+    if (position & LPBorderPositionLeft) {
+        [positions addObject:@(LPBorderPositionLeft)];
+    }
+    [self createViewBordersWithWidth:width color:color positions:positions];
+}
 
 - (void)makeBordersWithWidth:(float)width color:(UIColor *)color positions:(NSArray *)positions
 {
     NSMutableDictionary *directionDict = [[NSMutableDictionary alloc] init];
     for (NSNumber *pos in positions) {
-        if ([kPositionAll containsObject:pos]) {
+        if ([kLPPositionAll containsObject:pos]) {
             [directionDict setObject:@1 forKey:pos];
         }
     }
     if ([directionDict allKeys].count > 0) {
-        [self createBordersWithWidth:width color:color positions:[directionDict allKeys]];
+        [self createViewBordersWithWidth:width color:color positions:[directionDict allKeys]];
     }
 }
 
-- (UIView *)createBordersWithWidth:(float)width color:(UIColor *)color positions:(NSArray *)positions
+- (UIView *)createViewBordersWithWidth:(float)width color:(UIColor *)color positions:(NSArray *)positions
 {
     for (int i = 0; i < positions.count; i++) {
         CAGradientLayer *borderLayer = [CAGradientLayer layer];

@@ -13,7 +13,7 @@
 		04A0ACD61C70228A00D4C1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A0ACD41C70228A00D4C1C5 /* Main.storyboard */; };
 		04A0ACD81C70228A00D4C1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A0ACD71C70228A00D4C1C5 /* Assets.xcassets */; };
 		04A0ACDB1C70228A00D4C1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A0ACD91C70228A00D4C1C5 /* LaunchScreen.storyboard */; };
-		04A0ACE51C7022AE00D4C1C5 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0ACE41C7022AE00D4C1C5 /* UIView+Border.m */; };
+		04D282271D222E6A00BDF036 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D282261D222E6A00BDF036 /* UIView+Border.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		04A0ACD71C70228A00D4C1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A0ACDA1C70228A00D4C1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A0ACDC1C70228A00D4C1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04A0ACE31C7022AE00D4C1C5 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
-		04A0ACE41C7022AE00D4C1C5 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		04D282251D222E6A00BDF036 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
+		04D282261D222E6A00BDF036 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 		04A0ACE21C70228F00D4C1C5 /* LPViewBorderMaker */ = {
 			isa = PBXGroup;
 			children = (
-				04A0ACE31C7022AE00D4C1C5 /* UIView+Border.h */,
-				04A0ACE41C7022AE00D4C1C5 /* UIView+Border.m */,
+				04D282251D222E6A00BDF036 /* UIView+Border.h */,
+				04D282261D222E6A00BDF036 /* UIView+Border.m */,
 			);
 			path = LPViewBorderMaker;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A0ACE51C7022AE00D4C1C5 /* UIView+Border.m in Sources */,
+				04D282271D222E6A00BDF036 /* UIView+Border.m in Sources */,
 				04A0ACD31C70228A00D4C1C5 /* ViewController.m in Sources */,
 				04A0ACD01C70228A00D4C1C5 /* AppDelegate.m in Sources */,
 				04A0ACCD1C70228A00D4C1C5 /* main.m in Sources */,

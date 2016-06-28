@@ -33,8 +33,7 @@
     if (position & LPBorderPositionLeft) {
         [positions addObject:@(LPBorderPositionLeft)];
     }
-    UIView *border = [self createViewBordersWithWidth:width color:color positions:positions];
-    [self addSubview:border];
+    [self createViewBordersWithWidth:width color:color positions:positions];
 }
 
 - (void)makeBordersWithWidth:(float)width color:(UIColor *)color positions:(NSArray *)positions
@@ -46,16 +45,12 @@
         }
     }
     if ([directionDict allKeys].count > 0) {
-        UIView *border = [self createViewBordersWithWidth:width color:color positions:[directionDict allKeys]];
-        [self addSubview:border];
+        [self createViewBordersWithWidth:width color:color positions:[directionDict allKeys]];
     }
 }
 
 - (UIView *)createViewBordersWithWidth:(float)width color:(UIColor *)color positions:(NSArray *)positions
 {
-    UIView *borderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
-    borderView.backgroundColor = [UIColor clearColor];
-    
     for (int i = 0; i < positions.count; i++) {
         CAGradientLayer *borderLayer = [CAGradientLayer layer];
         LPBorderPosition position = (LPBorderPosition)[positions[i] integerValue];
@@ -88,9 +83,9 @@
                 break;
         }
         borderLayer.colors = [NSArray arrayWithObjects:(id)[color CGColor], (id)[[UIColor clearColor] CGColor], nil];
-        [borderView.layer insertSublayer:borderLayer atIndex:0];
+        [self.layer insertSublayer:borderLayer atIndex:0];
     }
-    return borderView;
+    return self;
 }
 
 @end

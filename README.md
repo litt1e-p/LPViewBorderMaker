@@ -25,6 +25,10 @@ UIView extension of making UIView borders
 
 # Release Notes
 
+- 1.0.0
+
+  modify function params type
+
 - 0.0.2
 
   view layer bugfix

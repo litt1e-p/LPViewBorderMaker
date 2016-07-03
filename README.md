@@ -2,6 +2,10 @@
 
 UIView extension of making UIView borders
 
+# Additional
+
+[Swift rewrite version](https://github.com/litt1e-p/LPViewBorderMaker-Swift) is available
+
 # Install
 
 ###### `pod 'LPViewBorderMaker', '~> 1.0.0'`
